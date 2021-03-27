@@ -1,103 +1,112 @@
-[![hackmd-github-sync-badge](https://hackmd.io/LgcJvZRCSfe-dHRRcbShzw/badge)](https://hackmd.io/LgcJvZRCSfe-dHRRcbShzw)
-# 2.函式print(),input(),變數以及四則運算
-
-- [回目錄](/5mKoyoSOQOyK2Q0y8bKFDA)
-
-### 本次課程目標
-* 1、將文字顯示在螢幕上
-* 2、可以利用python來編寫、編輯與運行程式
-* 3、會使用`print()`,`input()`函式
-* 4、利用python進行四則運算
+# 1.編程環境介紹
 
 ---
 
-### :a: 使用函式 print()
-:::info
-### :bulb:`print(value %(引數串列),sep=間隔字串,end=結尾字串)`
-:::
+- [程式筆記目錄](/5mKoyoSOQOyK2Q0y8bKFDA)
 
-#### :one: 在螢幕上列印 `"3+2"` ，使用 `print()`函式
-
-
-```(python)
-print("3+2")   #加法
-```
-> [ :?: 結果是列印出字串 3+2/ 還是數字3+2的和 ?]
-
-----
-
-#### :two: 在螢幕上列印 `7-4` ，使用` print()`函式
-
-```(python)
-print(7-4)   #減法
-```
-----
-
-
-#### :heart: 練習
-
-```(::python::)
-print(4 * 5)   #乘法
-print(5 / 3)   #浮點數除法
-print(15 ** 2)   #次方(指數)
-print(35 // 3)    #整數除法
-print(35 % 3)     #取除法的餘數
-print(3*8,(16-2)*8)   # (a,b)
-print("Scott :heart: Marry!") #引號列印出字串
-```
-
-
-[觀看程式列印結果ideone](https://ideone.com/ootO3p)
-
-----
-:::danger
-:baby_chick: 想想看，以下問題 :face_with_raised_eyebrow:
-1. 41被7除，請問餘數為?
-2. 列印出3的8次方
-3. 請計算出 `(a,b)=((5%(101%3)),((76//3)*4))`的結果為
-:::
-
- 
 ---
 
-### :b: 使用函式 input()
+### 寫在前面
+
+寫程式是讓電腦幫我們做事，學會python後，試著讓它變好玩，然後在生活中實現它
+
+
+其實，不只就業，升學也是，每一個科系都逃不掉編程這件事
+- [推動大學程式設計教學](https://www.facebook.com/PLUS.university/)
+
+- [Just Kitchen利用大數據打造虛擬廚房](https://www.vogue.com.tw/lifestyle/article/%E5%A4%96%E9%80%81-just-kitchen?fbclid=IwAR2C7Wpk_ZocV4_K75UzWmGiJDl4WSMKvN6DU7NWtUHVOHAyDkUl2-uhXFY)
+
+
+
+---
+
+本週課程目標：
+* 1、編程環境介紹
+* 2、什麼是python
+* 3、如何在電腦中安裝python
+
+
+## 準備階段：編輯程式的環境
 :::info
-### :bulb:`變數 = input([提示字串])` 
+1. [安裝 anaconda]
+2. [juypter notebook]
 :::
 
-#### :one: 練習使用input()函式讓使用者輸入資料
+## [安裝 anaconda]
+Anaconda是一個免費開源的Python和R語言的發行版本
+用於計算科學，裏面也包括了許多資料分析、機器學習、視覺化的套件。
+Anaconda使用軟體套件管理系統Conda進行管理
 
-```(::python::) 
-print(" 請輸入你的名字 ")   #在螢幕上顯示 請輸入你的名字
-name = input()              #儲存資料到name中
-print(" 請輸入你的年齡 ") 
-age = input()               
-print('Hi ' + name + ':'+ age +'歲'+ '!')  #在螢幕上輸出資料
-```
-[觀看程式列印結果ideone](https://ideone.com/epMSWq)
+---
 
-----
+#### [**下載anaconda**](https://www.anaconda.com/products/individual)
 
-#### :heart: 練習
-```(:::python)
-ct = int(input("輸入攝氏溫度\n")) # \n 表示換行 new line
-print('攝氏%d度' %ct)
-print(type(ct))
-f =(((ct*9)/5)+32)
-print(type(f))
-print('f的記憶體位置:',id(f))
-print('華氏%2.2f度' %f)
-```
+#### **點選download進行安裝動作**
+
+#### **選擇你電腦的版本進行安裝**
+
+#### 安裝完後anaconda開啟的畫面如下
+
+![安裝完後anaconda開啟的畫面](https://i.imgur.com/oZAKmKv.png)
+
+
+---
+
+## jupyter notebook的使用
+[**參考網站**](https://medium.com/ai-for-k12/jupyter-notebook-%E5%AE%8C%E6%95%B4%E4%BB%8B%E7%B4%B9-%E5%AE%89%E8%A3%9D%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E-846b5432f044)
+
+ 開啟anaconda後，利用圖中顯示的jupyter 按- [launch]
+即會跳轉至[juypter notebook頁面](https:// "title")
+並開啟jupyter notebook
+![開啟jupyter notebook](https://i.imgur.com/DO2vI7Y.jpg)
+
+* 左上→紅框中是顯示你目前所在的資料夾位置
+* 右上→new→可以開啟新的文件 → 請選擇 [python 3]
+![右上new按下後的圖](https://i.imgur.com/6fPqNsN.png)
+* 上方的[**Untitle**]字樣，點選後可以更改檔名→請設定notebook的檔名→按下rename
+![更改檔名](https://i.imgur.com/4vqGV11.png)
+
+*
+![](https://i.imgur.com/Y2gtiQW.png)
+
+---
+### 打程式碼的地方
+
+![打程式碼的地方](https://i.imgur.com/qBw6LpW.png)
+
+---
+### 秀出結果的地方
+
+![秀出結果的地方](https://i.imgur.com/wPWpZVc.png)
+
+---
+### 可以選擇是打程式碼還是文字
+
+![可以選擇是打程式碼還是文字](https://i.imgur.com/mpt7ozl.png)
+
+---
+### jupyter notebook的使用
+
+* 分段執行，可以做到哪，執行到哪
+* 可以加入文字或標題，或者是把很長的程式碼分段執行
+* 另一個相似的是 colab 
+
+#### 練習時間
+
+
+---
+### 錯誤的顯示
+
+![錯誤的顯示](https://i.imgur.com/HAvRBEx.png)
+
+你知道如何解讀，錯在哪裏嗎?
 :::danger
-:hatching_chick: 
-1.`print(type())`可印出該變數的型別
-2.`print(id())`可印出該變數的記憶體位址
-
-
+- 1. Name Error 名稱錯誤 使用註釋 這四個字未定義，因為這是註解文字，我們在註解文字前未加#，以致於電腦誤解了
+- 2. 單行註釋 使用`# `放在文字最前端
+- 3. 多行註釋 使用`"""    """`或`'''  '''`包住文字
 :::
-[觀看程式列印結果ideone](https://ideone.com/sVXM7x)
 
-
+---
 
 
 
